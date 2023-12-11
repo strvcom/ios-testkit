@@ -13,7 +13,6 @@ public extension XCTestCase {
         testName: String = #function,
         line: UInt = #line
     ) {
-
         let snapshotDirectory = ProcessInfo.processInfo.environment["SNAPSHOT_REFERENCE_DIR"]! + "/" + #file
         let failure = verifySnapshot(
             of: try value(),
