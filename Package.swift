@@ -27,10 +27,6 @@ let package = Package(
             name: "TestKit",
             dependencies: [
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
-            ],
-            linkerSettings: [
-                // https://github.com/tuist/tuist/issues/5538
-                .linkedFramework(("XCTest"))
             ]
         ),
         .testTarget(
